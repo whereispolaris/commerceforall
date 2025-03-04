@@ -1,18 +1,18 @@
 import React from 'react';
+import { Input, Textarea, Button, Heading, VStack, Container } from '@chakra-ui/react';
 
 const Contact = () => {
-    return (
-        <div className="container">
-            <h1>Contact Us</h1>
-            <p>Have questions? Get in touch with us today!</p>
-            <form className="contact-form">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    );
+  return (
+    <Container centerContent minH="100vh">
+      <VStack spacing={4} w="100%" maxW="500px">
+        <Heading>Contact Us</Heading>
+        <Input placeholder="Your Name" size="lg" />
+        <Input placeholder="Your Email" size="lg" />
+        <Textarea placeholder="Your Message" size="lg" />
+        <Button colorScheme="blue" size="lg">Send Message</Button>
+      </VStack>
+    </Container>
+  );
 };
 
 export default Contact;

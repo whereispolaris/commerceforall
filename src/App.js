@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,6 +10,7 @@ import Contact from './pages/Contact';
 
 const App = () => {
   return (
+    <ChakraProvider>
       <Router>
         <Header />
         <main>
@@ -21,6 +23,7 @@ const App = () => {
         </main>
         <Footer />
       </Router>
+    </ChakraProvider>
   );
 };
 

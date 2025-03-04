@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Box, Flex, Heading, Spacer, Button } from '@chakra-ui/react';
 
 const Header = () => {
-    return (
-        <header className="header">
-            <h2>Commerce For All</h2>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/services">Services</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </header>
-    );
+  return (
+    <Box bg="gray.900" px={6} py={4} color="white">
+      <Flex align="center">
+        <Heading size="md">Commerce For All</Heading>
+        <Spacer />
+        <Flex gap={4}>
+          <Button as={Link} to="/" variant="link" color="white">Home</Button>
+          <Button as={Link} to="/services" variant="link" color="white">Services</Button>
+          <Button as={Link} to="/about" variant="link" color="white">About</Button>
+          <Button as={Link} to="/contact" variant="link" color="white">Contact</Button>
+        </Flex>
+      </Flex>
+    </Box>
+  );
 };
 
 export default Header;
